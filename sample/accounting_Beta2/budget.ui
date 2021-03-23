@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Budget</class>
+ <widget class="QDialog" name="Budget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>436</width>
+    <height>255</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>436</width>
+    <height>255</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>436</width>
+    <height>255</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>虎图帐</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../../../../home/fordream/demo/accounting_v0.99/img.qrc">
+    <normaloff>:/img/icon.jpg</normaloff>:/img/icon.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Budget {
+	background-color: #ffbc2e;
+}
+#label {
+	font-family: &quot;逐浪雅宋体&quot;;
+	font-size: 27px;
+	color: #fff;
+}
+#lineEdit {
+	border: 0;
+	border-radius: 10px;
+}
+#setBtn, #pushButton {
+	border: 0;
+	border-radius: 15px;
+	font-family: &quot;逐浪雅宋体&quot;;
+	font-size: 25px;
+	color: #fff;
+}
+#setBtn {
+	background-color: #ffcc33;
+}
+#setBtn:pressed {
+	background-color: #ff9600;
+}
+#pushButton {
+	background-color: #ffcc33;
+}
+#pushButton:pressed {
+	background-color: #ff9600;
+}</string>
+  </property>
+  <widget class="QPushButton" name="setBtn">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>170</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确定预算</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>请输入预算：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>80</y>
+     <width>171</width>
+     <height>35</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

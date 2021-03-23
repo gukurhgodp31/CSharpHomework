@@ -1,0 +1,1609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>accounting</class>
+ <widget class="QDialog" name="accounting">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>540</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>540</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>虎图帐</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="img.qrc">
+    <normaloff>:/img/icon.jpg</normaloff>:/img/icon.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#accounting{
+	background-color: #f3f3f3;
+}
+
+QLabel {
+	font-family: &quot;微软雅黑&quot;;
+	font-size: 18px;
+	color: #666;
+}
+QPushButton#IncomeBtn, QPushButton#OutcomeBtn, QPushButton#SaveBtn {
+	border-radius: 27px;
+	font-family: &quot;逐浪雅宋体&quot;;
+	color: #fff;
+	font-size: 35px;
+}
+QPushButton#IncomeBtn {
+	background-color: #ffa594;
+}
+QPushButton#IncomeBtn:pressed {
+	background-color: #ff6c50;
+}
+
+QPushButton#OutcomeBtn {
+	background-color: #95c5ff;
+}
+QPushButton#OutcomeBtn:pressed {
+	background-color: #3893ff;
+}
+QPushButton#SaveBtn {
+	background-color: #ffbc2e;
+}
+QPushButton#SaveBtn:pressed {
+	background-color: #ff9600;
+}
+QPushButton#AccountStatementBtn,QPushButton#AccountingBtn,QPushButton#ChartBtn,QPushButton#HomepageBtn {
+    color: #fff;
+    font-size: 45px;
+    font-family: &quot;逐浪雅宋体&quot;;
+    line-height: 80px;
+    height: 80px;
+    border: 0;
+}
+
+QPushButton#AccountStatementBtn:hover,QPushButton#AccountingBtn:hover,QPushButton#ChartBtn:hover,QPushButton#HomepageBtn:hover {
+
+	background-image: url(:/img/hoverBackground.png);
+}
+QPushButton#AccountStatementBtn:pressed,QPushButton#AccountingBtn:pressed,QPushButton#ChartBtn:pressed,QPushButton#HomepageBtn:pressed {
+
+	background-image: url(:/img/pressedBackground.png);
+}
+QWidget#leftContainer{
+    background-color:#ffbc2e
+}
+QComboBox {
+	line-height: 20px;
+    height: 20px;
+    font-family: &quot;微软雅黑&quot;;
+    font-size: 18px;
+    color: #666;
+	border: 1px solid #ccc;
+}
+
+QComboBox::down-arrow {
+	width: 16px;
+	image: url(:/img/btnDownUnChecked.png);
+	background-color: #fff;
+}
+QComboBox:pressed QComboBox::down-arrow{
+
+	image: url(:/img/btnDownChecked.png);
+}
+QComboBox::drop-down {
+	border: 0;
+}
+#RemarkText {
+	border: 1px solid #eaeaea;
+}
+#Amount {
+	border: 1px solid #eaeaea;
+}
+#BounsBtn, #ChemicalBtn, #ClothesBtn, #CommunicationBtn, #DietBtn, #DigitalBtn, #EntertainmentBtn,#LivingExpenseBtn, #MakeupBtn, #MedicalBtn, #NormalBtn, #NormalBtn_2,#OtherBtn,#OtherBtn_2,#RedPacketBtn,#SalaryBtn,#StudyBtn,#TrafficBtn{
+	border: 0;
+}
+#BounsBtn:checked, #ChemicalBtn:checked, #ClothesBtn:checked, #CommunicationBtn:checked, #DietBtn:checked, #DigitalBtn:checked, #EntertainmentBtn:checked,#LivingExpenseBtn:checked, #MakeupBtn:checked, #MedicalBtn:checked, #NormalBtn:checked, #NormalBtn_2:checked,#OtherBtn:checked,#OtherBtn_2:checked,#RedPacketBtn:checked,#SalaryBtn:checked,#StudyBtn:checked,#TrafficBtn:checked{
+	border-radius: 22px;
+	border: 1px solid red;
+}
+
+
+#BounsLabel, #ChemicalLabel, #ClothingLabel, #CommunicationLabel, #DietLabel, #DigitalLabel, #EntertainmentLabel, #LivingExpenseLabel, #MakeupLabel,#MedicalLabel,#NormalLabel,#NormalLabel_2,#OtherLabel,#OtherLabel_2,#RedPacketLabel,#SalaryLabel,#StudyLabel,#TrafficLabel{
+	font-family: &quot;微软雅黑&quot;;
+	font-size: 13px;
+	color: #989898;
+}
+
+#setBtn {
+	border: 0;
+	background-image: url(:/img/keyUnclicked.png);
+}
+#setBtn:pressed {
+	background-image :url(:/img/keyCLicked.png)
+}</string>
+  </property>
+  <widget class="QLabel" name="LabelDate">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>130</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>日期：</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BounsBtn">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/earnIconChecked3.png</normaloff>:/img/earnIconChecked3.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="EntertainmentBtn">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/payIconChecked10.png</normaloff>:/img/payIconChecked10.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LabelAccount">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>450</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>金额：</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ClothesBtn">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/payIconChecked4.png</normaloff>:/img/payIconChecked4.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>20</y>
+     <width>651</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QPushButton" name="IncomeBtn">
+      <property name="minimumSize">
+       <size>
+        <width>260</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>260</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>收入</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="OutcomeBtn">
+      <property name="minimumSize">
+       <size>
+        <width>260</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>260</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>支出</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>161</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="lOuterLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="leftContainer" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>131</width>
+         <height>501</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="leftLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="HomepageBtn">
+          <property name="text">
+           <string>首页</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="AccountingBtn">
+          <property name="text">
+           <string>记账</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="AccountStatementBtn">
+          <property name="text">
+           <string>流水</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ChartBtn">
+          <property name="text">
+           <string>图析</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="RedPacketBtn">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/earnIconChecked5.png</normaloff>:/img/earnIconChecked5.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SaveLabel">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>300</y>
+     <width>171</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SaveBtn">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>450</y>
+     <width>153</width>
+     <height>55</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确认</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="DietBtn">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>200</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/payIconChecked2.png</normaloff>:/img/payIconChecked2.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="RemarkText">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>290</y>
+     <width>421</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ChemicalBtn">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/payIconChecked9.png</normaloff>:/img/payIconChecked9.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LabelItem">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>190</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>类别：</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="StudyBtn">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/payIconChecked8.png</normaloff>:/img/payIconChecked8.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="MedicalBtn">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/payIconChecked5.png</normaloff>:/img/payIconChecked5.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SalaryBtn">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/earnIconChecked4.png</normaloff>:/img/earnIconChecked4.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="OtherBtn_2">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/earnIconChecked6.png</normaloff>:/img/earnIconChecked6.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="TrafficBtn">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/payIconChecked3.png</normaloff>:/img/payIconChecked3.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Amount">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>450</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="CommunicationBtn">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/payIconChecked6.png</normaloff>:/img/payIconChecked6.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NormalBtn">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/earnIconChecked1.png</normaloff>:/img/earnIconChecked1.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="OtherBtn">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/earnIconChecked6.png</normaloff>:/img/earnIconChecked6.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LabelExtraText">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>290</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>备注：</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="MakeupBtn">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/payIconChecked7.png</normaloff>:/img/payIconChecked7.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="DigitalBtn">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/payIconChecked11.png</normaloff>:/img/payIconChecked11.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NormalBtn_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border: 0;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/earnIconChecked1.png</normaloff>:/img/earnIconChecked1.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="shortcut">
+    <string/>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="chooseYear">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>140</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>2015</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2016</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2017</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2018</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2019</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2020</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="chooseMonth">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>140</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>8</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="chooseDay">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>140</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>13</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>14</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>15</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>17</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>18</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>19</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>20</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>21</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>22</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>23</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>24</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>25</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>26</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>27</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>28</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>29</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>31</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>130</y>
+     <width>21</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>年</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>130</y>
+     <width>21</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>月</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>130</y>
+     <width>21</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>日</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="NormalLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>305</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>一般</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DietLabel">
+   <property name="geometry">
+    <rect>
+     <x>355</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>饮食</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ClothingLabel">
+   <property name="geometry">
+    <rect>
+     <x>455</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>服饰</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TrafficLabel">
+   <property name="geometry">
+    <rect>
+     <x>405</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>交通</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StudyLabel">
+   <property name="geometry">
+    <rect>
+     <x>655</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>学习</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ChemicalLabel">
+   <property name="geometry">
+    <rect>
+     <x>705</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>日化</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="MakeupLabel">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>化妆</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="EntertainmentLabel">
+   <property name="geometry">
+    <rect>
+     <x>755</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>娱乐</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DigitalLabel">
+   <property name="geometry">
+    <rect>
+     <x>805</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>社交</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CommunicationLabel">
+   <property name="geometry">
+    <rect>
+     <x>555</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>通讯</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="MedicalLabel">
+   <property name="geometry">
+    <rect>
+     <x>505</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>医疗</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="OtherLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>855</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>其他</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="NormalLabel">
+   <property name="geometry">
+    <rect>
+     <x>305</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>一般</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LivingExpenseLabel">
+   <property name="geometry">
+    <rect>
+     <x>355</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>生活</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="RedPacketLabel">
+   <property name="geometry">
+    <rect>
+     <x>505</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>红包</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="BounsLabel">
+   <property name="geometry">
+    <rect>
+     <x>405</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>奖金</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SalaryLabel">
+   <property name="geometry">
+    <rect>
+     <x>455</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>工资</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="OtherLabel">
+   <property name="geometry">
+    <rect>
+     <x>555</x>
+     <y>250</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>其他</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="LivingExpenseBtn">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>200</y>
+     <width>43</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>04b_21</family>
+     <pointsize>7</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="img.qrc">
+     <normaloff>:/img/earnIconChecked2.png</normaloff>:/img/earnIconChecked2.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>43</width>
+     <height>43</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="setBtn">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>450</y>
+     <width>159</width>
+     <height>53</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>97</width>
+     <height>56</height>
+    </size>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
+ <connections/>
+</ui>

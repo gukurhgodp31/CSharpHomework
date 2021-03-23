@@ -1,0 +1,7 @@
+#homepage {
+	background-image: url(:/img/settingBackground.png);
+}
+#loginBtn, #cancelBtn {
+	background-image: url(:/img/btnClawUnclicked.png);
+	border: 0;
+}

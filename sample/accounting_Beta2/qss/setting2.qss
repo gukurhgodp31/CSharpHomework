@@ -1,0 +1,14 @@
+#Setting_2 {
+	background-image: url(:/img/settingBackground.png);
+}
+#pwdLabel {
+	font-size: 36px;
+	color: #fff;
+	font-family: "逐浪雅宋体";
+}
+#lineEdit_4 {
+	border: 0;
+	border-radius: 15px;
+	font-size: 36px;
+	color: #ff9600
+}

@@ -1,0 +1,55 @@
+#chart{
+	background-color: #fafafa;
+}
+QLabel {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #666;
+}
+
+QPushButton#AccountStatementBtn,QPushButton#AccountingBtn,QPushButton#ChartBtn,QPushButton#HomepageBtn {
+    color: #fff;
+    font-size: 45px;
+    font-family: "逐浪雅宋体";
+    line-height: 80px;
+    height: 80px;
+    border: 0;
+}
+
+QPushButton#AccountStatementBtn:hover,QPushButton#AccountingBtn:hover,QPushButton#ChartBtn:hover,QPushButton#HomepageBtn:hover {
+
+	background-image: url(:/img/hoverBackground.png);
+}
+QPushButton#AccountStatementBtn:pressed,QPushButton#AccountingBtn:pressed,QPushButton#ChartBtn:pressed,QPushButton#HomepageBtn:pressed {
+
+	background-image: url(:/img/pressedBackground.png);
+}
+QWidget#leftContainer{
+    background-color:#ffbc2e
+}
+QComboBox {
+	line-height: 20px;
+    height: 20px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    color: #666;
+	border: 1px solid #ccc;
+}
+
+QComboBox::down-arrow {
+	width: 16px;
+    image: url(:/img/btnDownUnchecked.png);
+	background-color: #fff;
+}
+QComboBox:pressed QComboBox::down-arrow{
+    image: url(:/img/btnDownChecked.png);
+}
+QComboBox::drop-down {
+	border: 0;
+}
+#timeLabel {
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color: #666;
+
+}

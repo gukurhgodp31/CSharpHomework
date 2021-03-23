@@ -1,0 +1,84 @@
+#OutcomeTitle, #IncomeTitle, #RemainTitle, #label_5Title {
+    font-family: "逐浪雅宋体";
+    font-size: 36px;
+    color: #ff7e2e；
+}
+#OutcomeLabel, #IncomeLabel, #RemainLabel, #label_5,#RMB_1,#RMB_2,#RMB_3,#RMB_4 {
+    font-family: "微软雅黑";
+    font-size: 36px;
+    color: #000；
+}
+#day {
+    font-family: "微软雅黑";
+    color: #ff7e2e;
+    font-size: 27px;
+}
+#inOutTitle, #dayout_1Title, #dayout_1label, #RemainLabel_2, #RemainTitle_2 {
+    font-family: "微软雅黑";
+    font-size: 18px;
+    color: #7a7a7a;
+}
+#pushButton {
+    font-family: "微软雅黑"；
+    font-size: 20px;
+    color: #ff7e2e;
+}
+#pushButton {
+    color: #41710b;
+}
+#inOutDivider, #labelbudget, #labelout{
+    font-size: 16px;
+}
+#percent {
+    font-size: 24px;
+}
+#Homepage_1{
+	background-color: #fafafa;
+}
+QLabel {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #666;
+}
+#setBtn {
+	border: 0;
+}
+
+QPushButton#AccountStatementBtn,QPushButton#AccountingBtn,QPushButton#ChartBtn,QPushButton#HomepageBtn {
+    color: #fff;
+    font-size: 45px;
+    font-family: "逐浪雅宋体";
+    line-height: 80px;
+    height: 80px;
+    border: 0;
+}
+QPushButton#AccountStatementBtn:pressed,QPushButton#AccountingBtn:pressed,QPushButton#ChartBtn:pressed,QPushButton#HomepageBtn:pressed {
+	background: #ff9600;
+}
+QPushButton#AccountStatementBtn:hover,QPushButton#AccountingBtn:hover,QPushButton#ChartBtn:hover,QPushButton#HomepageBtn:hover {
+	background: #ff9600;
+}
+
+QWidget#leftContainer {
+    background-color:#ffbc2e
+}
+QComboBox {
+	line-height: 20px;
+    height: 20px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    color: #666;
+	border: 1px solid #ccc;
+}
+
+QComboBox::down-arrow {
+	width: 16px;
+    image: url(:/img/btnDownUnchecked.png);
+	background-color: #fff;
+}
+QComboBox:pressed QComboBox::down-arrow{
+    image: url(:/img/btnDownChecked.png);
+}
+QComboBox::drop-down {
+	border: 0;
+}

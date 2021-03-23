@@ -1,0 +1,25 @@
+#Setting {
+	background-image: url(:/img/settingBackground.png);
+}
+#pushButton_4, #cancelBtn {
+	border: 0;
+	font-family: "逐浪雅宋体";
+	background-image: url(:/img/btnClawUnclicked.png);
+	font-size: 40px;
+	color: #fff;
+}
+#pushButton_4:pressed, #cancelBtn:pressed {
+
+	background-image: url(:/img/btnClawClicked.png);
+}
+#oldPwdLabel, #newPwdLabel {
+	font-family: "逐浪雅宋体";
+	font-size: 36px;
+	color: #fff;
+}
+#lineEdit, #lineEdit_2 {
+	border: 0;
+	border-radius: 10px;
+	font-size: 36px;
+	color: #ff9600;
+}

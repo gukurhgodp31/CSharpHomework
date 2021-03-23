@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Homepage_1</class>
+ <widget class="QDialog" name="Homepage_1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>540</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>540</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>虎图帐</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="img.qrc">
+    <normaloff>:/img/icon.jpg</normaloff>:/img/icon.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#OutcomeTitle, #IncomeTitle, #RemainTitle, #label_5Title {
+    font-family: &quot;逐浪雅宋体&quot;;
+    font-size: 36px;
+    color: #ff7e2e；
+}
+#OutcomeLabel, #IncomeLabel, #RemainLabel{
+    font-family: &quot;微软雅黑&quot;;
+    font-size: 36px;
+    color:  #4a4a4a；
+}
+#label_5,#RMB_1,#RMB_2,#RMB_3,#RMB_4 {
+	font-family: &quot;微软雅黑&quot;;
+    font-size: 30px;
+    color:  #646464；
+}
+#day {
+    font-family: &quot;微软雅黑&quot;;
+    color: #ff7e2e;
+    font-size: 27px;
+}
+#inOutTitle, #dayout_1Title, #dayout_1label, #RemainLabel_2, #RemainTitle_2 {
+    font-family: &quot;微软雅黑&quot;;
+    font-size: 18px;
+    color: #7a7a7a;
+}
+#pushButton {
+    font-family: &quot;微软雅黑&quot;;
+    font-size: 20px;
+    color: #ff7e2e;
+}
+#inOutDivider, #labelbudget, #labelout{
+    font-size: 16px;
+}
+#percent {
+    font-size: 24px;
+}
+#Homepage_1{
+	background-color: #fafafa;
+}
+QLabel {
+	font-family: &quot;微软雅黑&quot;;
+	font-size: 18px;
+	color: #666;
+}
+#setBtn {
+	border: 0;
+}
+
+QPushButton#AccountStatementBtn,QPushButton#AccountingBtn,QPushButton#ChartBtn,QPushButton#HomepageBtn {
+    color: #fff;
+    font-size: 45px;
+    font-family: &quot;逐浪雅宋体&quot;;
+    line-height: 80px;
+    height: 80px;
+    border: 0;
+}
+
+QPushButton#AccountStatementBtn:hover,QPushButton#AccountingBtn:hover,QPushButton#ChartBtn:hover,QPushButton#HomepageBtn:hover {
+
+	background-image: url(:/img/hoverBackground.png);
+}
+QPushButton#AccountStatementBtn:pressed,QPushButton#AccountingBtn:pressed,QPushButton#ChartBtn:pressed,QPushButton#HomepageBtn:pressed {
+
+	background-image: url(:/img/pressedBackground.png);
+}
+
+QWidget#leftContainer {
+    background-color:#ffbc2e
+}
+QComboBox {
+	line-height: 20px;
+    height: 20px;
+    font-family: &quot;微软雅黑&quot;;
+    font-size: 18px;
+    color: #666;
+	border: 1px solid #ccc;
+}
+
+QComboBox::down-arrow {
+	width: 16px;
+    image: url(:/img/btnDownUnchecked.png);
+	background-color: #fff;
+}
+QComboBox:pressed QComboBox::down-arrow{
+    image: url(:/img/btnDownChecked.png);
+}
+QComboBox::drop-down {
+	border: 0;
+}
+#setBtn {
+	background-image: url(:/img/keyUnclicked.png);
+}
+#setBtn:pressed {
+	background-image :url(:/img/keyCLicked.png)
+}</string>
+  </property>
+  <widget class="QLabel" name="day">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>30</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2015年8月12日</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="IncomeLabel">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>130</y>
+     <width>111</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2000</string>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="OutcomeLabel">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>370</y>
+     <width>111</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="RemainLabel">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>370</y>
+     <width>111</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>161</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="lOuterLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="leftContainer" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>161</width>
+         <height>541</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="leftLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="HomepageBtn">
+          <property name="text">
+           <string>首页</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="AccountingBtn">
+          <property name="text">
+           <string>记账</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="AccountStatementBtn">
+          <property name="text">
+           <string>流水</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ChartBtn">
+          <property name="text">
+           <string>图析</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>430</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>点击设置预算</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>130</y>
+     <width>111</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="RemainLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>400</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>236.50</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>60</y>
+     <width>391</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="progressDonut"/>
+  </widget>
+  <widget class="QLabel" name="circle_4">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>290</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img.qrc">:/img/circle.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="circle_2">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>60</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img.qrc">:/img/circle.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="circle_3">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>290</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img.qrc">:/img/circle.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dayout_1label">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>370</y>
+     <width>61</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>21.4</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="percent">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>230</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>70%</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="circle_1">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>60</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img.qrc">:/img/circle.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="OutcomeTitle">
+   <property name="geometry">
+    <rect>
+     <x>235</x>
+     <y>280</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>本月支出</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="IncomeTitle">
+   <property name="geometry">
+    <rect>
+     <x>235</x>
+     <y>50</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>本月收入</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="RemainTitle">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>280</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>本月余额</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5Title">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>50</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>本月预算</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="RMB_1">
+   <property name="geometry">
+    <rect>
+     <x>265</x>
+     <y>170</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RMB</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="RMB_2">
+   <property name="geometry">
+    <rect>
+     <x>765</x>
+     <y>170</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RMB</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="RMB_3">
+   <property name="geometry">
+    <rect>
+     <x>765</x>
+     <y>410</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RMB</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="RMB_4">
+   <property name="geometry">
+    <rect>
+     <x>265</x>
+     <y>410</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RMB</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="inOutTitle">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>180</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>支出 / 预算</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dayout_1Title">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>370</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>本月日均支出：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="RemainTitle_2">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>400</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>还可以支出：</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>495</x>
+     <y>215</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="inOutDivider">
+    <property name="geometry">
+     <rect>
+      <x>54</x>
+      <y>0</y>
+      <width>9</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>/</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelbudget">
+    <property name="geometry">
+     <rect>
+      <x>66</x>
+      <y>0</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>预算值</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelout">
+    <property name="geometry">
+     <rect>
+      <x>-9</x>
+      <y>0</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>支出值</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="warning">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>510</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="remainmoney">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>510</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="setBtn">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>450</y>
+     <width>159</width>
+     <height>53</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>97</width>
+     <height>56</height>
+    </size>
+   </property>
+  </widget>
+  <zorder>day</zorder>
+  <zorder>IncomeLabel</zorder>
+  <zorder>OutcomeLabel</zorder>
+  <zorder>RemainLabel</zorder>
+  <zorder>horizontalLayoutWidget</zorder>
+  <zorder>label_5</zorder>
+  <zorder>verticalLayoutWidget</zorder>
+  <zorder>circle_4</zorder>
+  <zorder>circle_2</zorder>
+  <zorder>circle_3</zorder>
+  <zorder>percent</zorder>
+  <zorder>circle_1</zorder>
+  <zorder>OutcomeTitle</zorder>
+  <zorder>IncomeTitle</zorder>
+  <zorder>RemainTitle</zorder>
+  <zorder>label_5Title</zorder>
+  <zorder>RMB_1</zorder>
+  <zorder>RMB_2</zorder>
+  <zorder>RMB_3</zorder>
+  <zorder>RMB_4</zorder>
+  <zorder>inOutTitle</zorder>
+  <zorder>widget</zorder>
+  <zorder>warning</zorder>
+  <zorder>remainmoney</zorder>
+  <zorder>setBtn</zorder>
+  <zorder>dayout_1Title</zorder>
+  <zorder>dayout_1label</zorder>
+  <zorder>RemainTitle_2</zorder>
+  <zorder>RemainLabel_2</zorder>
+  <zorder>pushButton</zorder>
+ </widget>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
+ <connections/>
+</ui>
