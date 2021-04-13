@@ -17,8 +17,6 @@ namespace CSharpHW
         private static int Year = 2016;
         private static int Month = 1;
         private static int Day = 1;
-        private static Timer timer1;
-        private static String Amount = "";
         public Accounting()
         {
             InitializeComponent();
@@ -105,19 +103,6 @@ namespace CSharpHW
         private void MedicalBtn_Out_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void SaveBtn_Click(object sender, EventArgs e)
-        {
-            timer1 = new Timer();
-            LabelSave.Text = "Saved";
-            timer1.Interval = 1000;
-            timer1.Start();//在窗口中显示“saved"
-
-            Year = int.Parse(ChooseYear.SelectedItem.ToString());
-            Month = int.Parse(ChooseMonth.SelectedItem.ToString());
-            Day = int.Parse(ChooseDay.SelectedItem.ToString());
-            Amount = AmountText.Text;
         }
     }
 }

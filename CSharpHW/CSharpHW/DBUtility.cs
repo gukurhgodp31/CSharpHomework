@@ -26,27 +26,70 @@ namespace CSharpHW
             }
         }
 
-        public static void getResultset(MySqlCommand mySqlCommand)
+        public static DataSet getAllData()
         {
+            String sql = "SELECT * FROM accounting.account";
+            return getResultset(sql);
+        }
+
+        public static DataSet getDataByDate(int year, int month, int day)
+        {
+            String sql = "SELECT * FROM accounting.account WHERE year = " + year + " AND month =" + month + "AND day =" + day;
+            return getResultset(sql);
+        }
+
+        public static int getPassword()
+        {
+            String sql = "SELECT password FROM accounting.password WHERE id = 0";
+            return getResult(sql);
+        }
+
+        public static int getBudget()
+        {
+            String sql = "SELECT budget FROM accounting.budget WHERE id = 0";
+            return getResult(sql);
+        }
+
+        public static int getResult(String sql)
+        {
+            MySqlCommand mySqlCommand = new MySqlCommand(sql, conn);
             MySqlDataReader reader = mySqlCommand.ExecuteReader();
             try
             {
-                while (reader.Read())
+                reader.Read();
+                if (reader.HasRows)
                 {
-                    if (reader.HasRows)
-                    {
-                        Console.WriteLine("编号:" + reader.GetInt32(0) + "|姓名:" + reader.GetString(1) + "|年龄:" + reader.GetInt32(2) + "|学历:" + reader.GetString(3));
-                    }
+                    return reader.GetInt32(0);
                 }
+                return -1;
+                
             }
             catch (Exception)
             {
                 Console.WriteLine("查询失败了！");
+                return -1;
             }
             finally
             {
                 reader.Close();
             }
+        }
+
+        public static DataSet getResultset(String sql)
+        {
+            DataSet ds = new DataSet();
+            MySqlCommand mySqlCommand = new MySqlCommand(sql, conn);
+            try
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+                adapter.Fill(ds);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("查询失败了！");
+            }
+
+            return ds;
         }
         public static void insertIntoAccount(String category, int categoryNum, String inoutcome, int year, int month, int day, String amount, String RemarkText)
         {
