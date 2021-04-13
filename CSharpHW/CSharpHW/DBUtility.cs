@@ -10,7 +10,7 @@ namespace CSharpHW
 {
     class DBUtility
     {
-        private static MySqlConnection conn;
+        private MySqlConnection conn;
         public void connect(String password, String dbName)
         {
             string connection = "server=localhost;user id=root;password="+password+";database="+dbName+"; pooling=true;";
@@ -24,6 +24,12 @@ namespace CSharpHW
             {
                 conn.Close();
             }
+        }
+
+        public static MySqlCommand getSqlCommand(String sql, MySqlConnection mysql)
+        {
+            MySqlCommand mySqlCommand = new MySqlCommand(sql, mysql);
+            return mySqlCommand;
         }
 
         public static void getResultset(MySqlCommand mySqlCommand)
@@ -48,44 +54,13 @@ namespace CSharpHW
                 reader.Close();
             }
         }
-        public static void insertIntoAccount(String category, int categoryNum, String inoutcome, int year, int month, int day, String amount, String RemarkText)
-        {
-            String sql = "INSERT INTO accounting.account VALUES(" + category + ", " + categoryNum + ", " + inoutcome + ", " + year + ", " + month + ", " + day + ", " + amount + ", " + RemarkText + ")";
-            getExec(sql);
-        }
 
-        public static void createBudget(int budget)
-        {
-            String sql = "INSERT INTO accouting.budget VALUES(" + budget + ", 0)";
-            getExec(sql);
-        }
-
-        public static void createPassword(int password)
-        {
-            String sql = "INSERT INTO accouting.password VALUES(" + password + ", 0)";
-            getExec(sql);
-        }
-
-        public static void updateBudget(int budget)
-        {
-            //update student set name='李四' where id= 3
-            String sql = "UPDATE accouting.budget SET budget=" + budget + " where id = 0";
-            getExec(sql);
-        }
-
-        public static void updatePassword(int password)
-        {
-            //update student set name='李四' where id= 3
-            String sql = "UPDATE accouting.password SET budget=" + password + " where id = 0";
-            getExec(sql);
-        }
-
-        private static void getExec(String sql)
+        public static void getInsert(MySqlCommand mySqlCommand)
         {
             //"insert into account values(NULL,:category,:categoryNum,:inoutcome,:year,:month,:day,:amount,:remarktext)"
             //"INSERT INTO email.address (address) VALUES ('"+  address +"')"
-            //"SELECT address FROM email.address WHERE id = " + id"
-            MySqlCommand mySqlCommand = new MySqlCommand(sql, conn);
+            //"SELECT address FROM email.address WHERE id = " + id
+            String insert = "INSERT";
             try
             {
                 mySqlCommand.ExecuteNonQuery();
