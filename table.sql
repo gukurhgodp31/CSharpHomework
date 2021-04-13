@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
 --
--- Host: localhost    Database: accouting
+-- Host: localhost    Database: accounting
 -- ------------------------------------------------------
 -- Server version	5.7.16-log
 
@@ -42,7 +42,10 @@ DROP TABLE IF EXISTS `budget`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `budget` (
-  `budget` int(11) NOT NULL
+  `budget` int(11) NOT NULL,
+  `id` int(11) DEFAULT NULL,
+  UNIQUE KEY `budget_UNIQUE` (`budget`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -55,8 +58,10 @@ DROP TABLE IF EXISTS `password`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `password` (
   `password` int(11) NOT NULL,
+  `id` int(11) DEFAULT NULL,
   PRIMARY KEY (`password`),
-  UNIQUE KEY `password_UNIQUE` (`password`)
+  UNIQUE KEY `password_UNIQUE` (`password`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -69,4 +74,4 @@ CREATE TABLE `password` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:38:01
+-- Dump completed on 2016-12-19  9:55:57
