@@ -59,7 +59,7 @@
             this.SocialBtn_Out = new System.Windows.Forms.Button();
             this.OtherBtn_Out = new System.Windows.Forms.Button();
             this.RemarkText = new System.Windows.Forms.TextBox();
-            this.Amount = new System.Windows.Forms.TextBox();
+            this.AmountText = new System.Windows.Forms.TextBox();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.NormalBtn_In = new System.Windows.Forms.Button();
             this.LivingExpenseBtn_In = new System.Windows.Forms.Button();
@@ -430,13 +430,13 @@
             this.RemarkText.Size = new System.Drawing.Size(524, 186);
             this.RemarkText.TabIndex = 6;
             // 
-            // Amount
+            // AmountText
             // 
-            this.Amount.Font = new System.Drawing.Font("宋体", 15F);
-            this.Amount.Location = new System.Drawing.Point(362, 477);
-            this.Amount.Name = "Amount";
-            this.Amount.Size = new System.Drawing.Size(154, 36);
-            this.Amount.TabIndex = 7;
+            this.AmountText.Font = new System.Drawing.Font("宋体", 15F);
+            this.AmountText.Location = new System.Drawing.Point(362, 477);
+            this.AmountText.Name = "AmountText";
+            this.AmountText.Size = new System.Drawing.Size(154, 36);
+            this.AmountText.TabIndex = 7;
             // 
             // SaveBtn
             // 
@@ -446,6 +446,7 @@
             this.SaveBtn.TabIndex = 8;
             this.SaveBtn.Text = "保存";
             this.SaveBtn.UseVisualStyleBackColor = true;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // NormalBtn_In
             // 
@@ -521,7 +522,7 @@
             this.ClientSize = new System.Drawing.Size(1088, 584);
             this.Controls.Add(this.LabelSave);
             this.Controls.Add(this.SaveBtn);
-            this.Controls.Add(this.Amount);
+            this.Controls.Add(this.AmountText);
             this.Controls.Add(this.RemarkText);
             this.Controls.Add(this.OtherBtn_Out);
             this.Controls.Add(this.SocialBtn_Out);
@@ -595,7 +596,7 @@
         private System.Windows.Forms.Button SocialBtn_Out;
         private System.Windows.Forms.Button OtherBtn_Out;
         private System.Windows.Forms.TextBox RemarkText;
-        private System.Windows.Forms.TextBox Amount;
+        private System.Windows.Forms.TextBox AmountText;
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button NormalBtn_In;
         private System.Windows.Forms.Button LivingExpenseBtn_In;
